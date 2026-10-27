@@ -1,0 +1,92 @@
+
+:root{--bg:#fbf8f3;--ink:#6b5f57;--dk:#4d443e;--ac:#b5845f;--ln:#e4d9cd;--sd:#efe5d9;--sd2:#e2d3c3;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 15px/1.6 Jost,system-ui,sans-serif}
+html[lang=he] body{font-family:'Frank Ruhl Libre',Jost,serif}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+.serif,h1,h2,h3{font-family:'Cormorant Garamond','Frank Ruhl Libre',serif;font-weight:400;color:var(--dk);margin:0}
+.top{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 10px) 20px 10px;background:rgba(251,248,243,.97);border-bottom:1px solid transparent;transition:border-color .4s}
+.top.sc{border-color:var(--ln)}
+.brand{text-decoration:none;color:var(--dk);display:flex;flex-direction:column;line-height:1.1}
+.brand b{font:500 13px 'Cormorant Garamond',serif;letter-spacing:.32em}.brand i{font:italic 400 12px 'Cormorant Garamond',serif;color:var(--ac);letter-spacing:.04em;margin-top:2px}
+#mb{width:48px;height:48px;display:grid;place-content:center;gap:6px;margin-inline-end:-10px}
+#mb span{display:block;width:24px;height:1px;background:var(--dk);transition:transform .35s}
+#mb.o span:first-child{transform:translateY(3.5px) rotate(45deg)}#mb.o span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+#menu{position:fixed;inset:0;z-index:15;background:var(--bg);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+#menu.o{opacity:1;visibility:visible}
+#menu a.l{font:400 34px/1.5 'Cormorant Garamond','Frank Ruhl Libre',serif;color:var(--dk);text-decoration:none;padding:4px 20px}
+.langs{display:flex;gap:6px;margin-top:22px;border-top:1px solid var(--ln);padding-top:18px}
+.langs button{padding:10px 14px;font-size:14px;letter-spacing:.06em;color:var(--ink);border-bottom:1px solid transparent}.langs button.on{color:var(--ac);border-color:var(--ac)}
+#ownbtn{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.45;padding:12px 18px}
+.hero{min-height:82svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 20px 40px}
+.bh{font:300 15px 'Frank Ruhl Libre',serif;color:var(--ink);opacity:0;animation:fi 1.2s .2s forwards}
+.hero h1{font-size:clamp(26px,7.4vw,52px);letter-spacing:.42em;margin-inline-end:-.42em;margin-top:14px;opacity:0;animation:fi 1.6s .6s forwards;font-weight:400;color:#6f6359}
+.script{width:min(92vw,720px);display:block;margin:-4px auto 0;-webkit-mask:linear-gradient(90deg,#000 45%,transparent 55%) 100% 0/230% 100% no-repeat;mask:linear-gradient(90deg,#000 45%,transparent 55%) 100% 0/230% 100% no-repeat;animation:wr 3.4s 1.6s cubic-bezier(.45,.1,.35,1) forwards}
+.intro{max-width:340px;margin:22px auto 0;font-size:15px;letter-spacing:.03em;opacity:0;animation:fi 1.4s 4.6s forwards}
+.cue{width:1px;height:44px;background:linear-gradient(var(--ac),transparent);margin-top:26px;opacity:0;animation:fi 1s 5.2s forwards}
+@keyframes fi{to{opacity:1}}@keyframes wr{to{-webkit-mask-position:0 0;mask-position:0 0}}
+section{padding:56px 20px;max-width:1120px;margin:0 auto}
+.ey{font:400 11px Jost;letter-spacing:.34em;text-transform:uppercase;color:var(--ac);text-align:center;margin:0 0 6px}
+html[lang=he] .ey{letter-spacing:.1em}
+h2{font-size:clamp(30px,6vw,42px);text-align:center;line-height:1.1;margin-bottom:34px}
+.suites{display:grid;gap:44px}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.gal .m{grid-column:1/-1;aspect-ratio:4/3;overflow:hidden;background:var(--sd);position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal .m img{transition:opacity .35s}
+.gal button{aspect-ratio:1;overflow:hidden;background:var(--sd);opacity:.72;transition:opacity .3s;outline-offset:2px}.gal button:hover,.gal button.on{opacity:1}
+.gal button img{transition:transform .6s}.gal button:hover img{transform:scale(1.06)}
+.info{padding:22px 4px 0;text-align:center}
+.info h3{font-size:34px;letter-spacing:.14em;text-transform:uppercase}
+.meta{display:flex;justify-content:center;gap:18px;align-items:center;margin:6px 0 14px;font:400 19px 'Cormorant Garamond',serif;color:var(--ac)}
+.meta s{width:1px;height:14px;background:var(--ln)}
+.info ul{list-style:none;margin:0 auto;padding:0;max-width:380px}
+.info li{padding:9px 0;border-top:1px solid var(--ln);font-size:14.5px}.info li:last-child{border-bottom:1px solid var(--ln)}
+.tabs{display:flex;justify-content:center;gap:34px;margin-bottom:22px;border-bottom:1px solid var(--ln)}
+.tabs button{padding:12px 4px;font:400 15px 'Cormorant Garamond','Frank Ruhl Libre',serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid transparent;margin-bottom:-1px}.tabs button.on{color:var(--dk);border-color:var(--ac)}
+.lead{text-align:center;margin:-14px auto 22px;max-width:420px;font-size:14px}
+.cal{max-width:520px;margin:0 auto}
+.cn{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cn h3{font-size:26px}
+.cn button{width:48px;height:48px;font-size:22px;color:var(--dk)}.cn button:disabled{opacity:.2;cursor:default}
+
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:0;border-top:1px solid var(--ln);border-inline-start:1px solid var(--ln);transition:opacity .25s}
+.grid.f{opacity:0}
+.wd{font-size:10.5px;letter-spacing:.1em;text-align:center;padding:7px 0;color:var(--ac);border-inline-end:1px solid var(--ln);border-bottom:1px solid var(--ln);text-transform:uppercase}
+.d{aspect-ratio:1/1.12;border-inline-end:1px solid var(--ln);border-bottom:1px solid var(--ln);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;position:relative;min-width:0;background:transparent;font:inherit}
+.d .n{font:400 19px/1 'Cormorant Garamond',serif;color:var(--dk)}
+.d .h{font:300 8.5px/1.1 'Frank Ruhl Libre',serif;color:var(--ink);opacity:.8;white-space:nowrap;max-width:100%;overflow:hidden}
+.d.e{border-inline-end-color:var(--ln)}
+.d.p{opacity:.38}
+.d.t .n{color:var(--ac);font-weight:500}.d.t::after{content:"";position:absolute;bottom:5px;width:14px;height:1px;background:var(--ac)}
+.d.r{background:var(--sd2)}.d.r .n,.d.r .h{color:#8a7a6d}
+.d.r::before{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent calc(50% - .5px),rgba(107,95,87,.5),transparent calc(50% + .5px))}
+.lg{display:flex;justify-content:center;gap:26px;margin-top:16px;font-size:12px;letter-spacing:.1em}
+.lg span{display:flex;align-items:center;gap:8px}.lg i{width:14px;height:14px;border:1px solid var(--ln);display:block}.lg i.r{background:var(--sd2)}
+footer{text-align:center;padding:50px 20px calc(env(safe-area-inset-bottom,0px) + 50px);background:var(--sd);margin-top:20px}
+footer .row{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;margin-top:22px}
+footer small{display:block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--ac);margin-bottom:2px}
+footer a{font:400 22px 'Cormorant Garamond',serif;color:var(--dk);text-decoration:none;border-bottom:1px solid var(--ln);padding:4px 0;display:inline-block;direction:ltr}
+#toast{position:fixed;left:50%;top:76px;transform:translateX(-50%);z-index:40;background:var(--dk);color:#fbf8f3;padding:11px 18px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .3s;max-width:88vw;text-align:center}#toast.o{opacity:1}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media(min-width:860px){.suites{grid-template-columns:1fr 1fr;gap:56px}section{padding:84px 40px}.top{padding-inline:40px}.d .h{font-size:10px}.d .n{font-size:22px}.hero{min-height:86vh}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}}
+
+#dash,#login{position:fixed;inset:0;z-index:50;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:manipulation}
+.pane{max-width:520px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 18px) 18px 160px}
+.pane h2{font-size:30px;margin:6px 0 18px;text-align:start}
+.hd{display:flex;justify-content:space-between;align-items:center}
+.hd button{padding:12px 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.f label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);margin:16px 0 6px}
+.f input{width:100%;font:400 17px Jost,sans-serif;padding:14px;border:1px solid var(--ln);background:#fff;color:var(--dk);border-radius:0}
+.big{width:100%;padding:16px;margin-top:20px;background:var(--dk);color:#fbf8f3;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.big:disabled{opacity:.4}
+.err{color:#9a4a3a;font-size:14px;min-height:20px;margin-top:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.two button{padding:15px 0;border:1px solid var(--ln);font-size:15px;letter-spacing:.06em}.two button.on{background:var(--dk);color:#fbf8f3;border-color:var(--dk)}
+#dash .d{cursor:pointer;-webkit-tap-highlight-color:transparent}#dash .d.p{cursor:default;pointer-events:none}
+#dash .grid{transition:none}
+#dp{position:fixed;inset:auto 0 0;z-index:51;background:var(--bg);border-top:1px solid var(--ln);padding:14px 18px calc(env(safe-area-inset-bottom,0px) + 14px);box-shadow:0 -10px 30px rgba(77,68,62,.1)}
+#dp .in{max-width:520px;margin:0 auto}#dp b{display:block;font:500 20px 'Cormorant Garamond',serif;color:var(--dk)}#dp small{display:block;margin-bottom:10px;color:var(--ink)}
+#dp .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}#dp .row button{padding:14px 0;border:1px solid var(--dk);font-size:12px;letter-spacing:.14em;text-transform:uppercase}#dp .row .pr{background:var(--ac);border-color:var(--ac);color:#fff}#dp .row button:disabled{opacity:.35}
+.d.g{outline:1px solid var(--ac);outline-offset:-1px;background:rgba(181,132,95,.16)}.d.s,.d.z{background:rgba(181,132,95,.38)}
